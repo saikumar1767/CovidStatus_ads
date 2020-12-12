@@ -1,0 +1,149 @@
+.App {
+  text-align: center;
+}
+
+body{
+  background-color: blanchedalmond;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes marquee {
+  0%   { text-indent: 1500px }
+  100% { text-indent: -2500px }
+}
+
+@-webkit-keyframes marquee {
+  0%   { text-indent: 1500px }
+  100% { text-indent: -2500px }
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  -webkit-animation: marquee 40s linear infinite;
+}
+
+.marquee:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.wrap {
+  perspective: none;
+  perspective-origin: 0 0;
+}
+.cube {
+  position: relative;
+  width: 150px;
+  transform-style: preserve-3d;
+}
+
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+.front {
+  transform: translateZ(100px);
+}
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+div {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cube {
+  animation: spin 25s infinite linear;
+}
+
+.status {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  padding: 30px 20px 20px 100px;
+}
+
+.cube div {
+  position: absolute;
+  padding: 30px 20px 20px 5px;
+  width: 200px;
+  height: 200px;
+  background: red;
+  color: #fff;
+  font-family: Arial;
+  text-align: center;
+}
+
+.cross {
+  text-align: right;
+}
+
+.cross p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: red;
+}
+
+.state, .c-yell{
+  color: yellow;
+}
+
+.c-19, .c-num, .c-white{
+  color: white;
+}
+
+a{
+  text-decoration: none;
+}
